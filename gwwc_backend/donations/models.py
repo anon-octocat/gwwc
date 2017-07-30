@@ -5,7 +5,8 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Donation(models.Model):
     """
-    TODO
+    Users can track donations they've made to organizations, although they don't need to include the
+    name of the org if they don't want.
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     # TODO(JP) Could make these link to organization objects
@@ -15,26 +16,25 @@ class Donation(models.Model):
     date = models.DateTimeField('date of donation')
 
     def __str__(self):
-        # TODO Check date formatting
         return f"${self.amount} donation to {self.organization} on {self.date}"
 
 
 class Income(models.Model):
     """
-    TODO
+    User's annual income, in USD
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     amount = models.DecimalField(decimal_places=15, max_digits=30)
 
     def __str__(self):
         return f"${self.amount} per year income"
 
 
-class Plege(models.Model):
+class Pledge(models.Model):
     """
-    TODO
+    What percentage did the user pledge to donate
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     percentage = models.DecimalField(
         decimal_places=15,
         max_digits=30,
@@ -45,5 +45,4 @@ class Plege(models.Model):
     )
 
     def __str__(self):
-        # TODO Check date formatting
-        return "A pledge to donate {self.percentage} of income per year"
+        return f"A pledge to donate {self.percentage} of income per year"
