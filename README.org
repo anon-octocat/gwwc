@@ -1,0 +1,4 @@
+* CEA Fullstack Developer Trial Task
+** TODO Convert to markdown
+** Style
+The Python code is written in JP standard style, mostly pep8 but with 100 character line limits.  Docstrings are formatted for ease of typing and do not conform to a standard style.

@@ -1,0 +1,28 @@
+# https://github.com/github/gitignore/blob/master/Python.gitignore
+__pycache__/
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django stuff:
+*.log
+local_settings.py
+
+# MacOS
+.DS_Store
+
+# JP Notes
+gameplan.org
