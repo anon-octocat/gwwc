@@ -1,4 +1,14 @@
 * CEA Fullstack Developer Trial Task
+** Requirements
+*** Python
+**** Python 3.6
+install TODO
+**** Django
+~pip install django~
+**** For other requirements, check gwwc_backend/requirements.txt
+*** Postgres
+http://postgresapp.com/
+http://postgresapp.com/documentation/cli-tools.html
 ** TODO Convert to markdown
 ** Style
 The Python code is written in JP standard style, mostly pep8 but with 100 character line limits.  Docstrings are formatted for ease of typing and do not conform to a standard style.

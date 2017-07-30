@@ -1,1 +1,4 @@
 * Discussion
+** Interesting notes along the way
+*** Multiple github users with smart ssh
+ https://gist.github.com/jexchan/2351996
