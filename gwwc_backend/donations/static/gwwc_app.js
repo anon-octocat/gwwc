@@ -7,7 +7,11 @@ var app = new Vue({
         pledge: null,
         income: null,
         donations: [
-            null,
+            {
+                "organization": null,
+                "amount": null,
+                "date": null
+            }
         ]
     },
     created: function () {
