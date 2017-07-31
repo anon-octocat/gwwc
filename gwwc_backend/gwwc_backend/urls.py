@@ -17,6 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^donations/', include('donations.urls')),
+    url(r'^', include('donations.urls')),
     url(r'^admin/', admin.site.urls)
 ]
