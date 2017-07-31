@@ -1,7 +1,18 @@
-<!-- TODO(Soon) Figure out how we want to do styling and then revisit -->
-<p>Hello {{ name }}, you have pledged {{ pledge }} of your {{ income }} in income.  Here are your donations so far</p>
+{#{ TODO(Soon) Figure out how we want to do styling and then revisit }#}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+
+{#{ See note in DISCUSSION.md }#}
+{% verbatim %}
+
+<div id="app">
+<p>Hello {{ name }}, you have pledged {{ pledge }}% of your ${{ income }} in income.  Here are your donations so far</p>
 <ul>
-{% for donation in donations %}
-    <li><a href="/donations/{{ donation.id }}/">{{ donation }}</a></li>
-{% endfor %}
+    <li v-for="donation in donations">{{ donation }}</li>
 </ul>
+</div>
+
+{% endverbatim %}
+
+<script src="{% static 'vue.js' %}"></script>
+<script src="{% static 'gwwc_app.js' %}"></script>

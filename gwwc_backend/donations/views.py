@@ -36,6 +36,7 @@ def api(request):
         "donations": [donation.serialize()
                       for donation in request.user.donation_set.all()]
     }
+    print(context["donations"])
     return render(request, "donations/api.djjson", context)
 
 
