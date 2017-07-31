@@ -19,12 +19,13 @@ class Donation(models.Model):
         return f"${self.amount} donation to {self.organization} on {self.date}"
 
     def serialize(self):
+        # TODO(JP) This is going to be inserted unescaped (maybe vue will handle that?) onto the
+        # site, so this must do the escaping here
         return """{
-    "organization": "%s",
-    "amount": %f,
-    "date": "%s",
-}
-    """ % (self.organization, self.amount, self.date)
+            "organization": "%s",
+            "amount": %f,
+            "date": "%s"
+      }""" % (self.organization, self.amount, self.date)
 
 
 class Income(models.Model):
