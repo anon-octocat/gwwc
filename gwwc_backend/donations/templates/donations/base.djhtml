@@ -20,9 +20,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <p><a href="/">Giving What We Can Donations Tracker</a></p> -->
-            {#{ TODO Link to logout }#}
         </div>
         <footer class="footer">
             <div class="container list-inline">
@@ -30,13 +27,6 @@
                 <li><a href="/accounts/logout">Logout</a></li>
             </div>
         </footer>
-
-    <!-- <footer class="footer"> -->
-    <!-- <div class="container"> -->
-    <!-- <li><a href="/">Home</a></li> -->
-    <!-- <li><a href="/">Logout</a></li> -->
-    <!-- </div> -->
-    <!-- </footer> -->
     </body>
 </html>
 
