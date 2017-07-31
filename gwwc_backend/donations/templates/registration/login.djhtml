@@ -1,6 +1,5 @@
-<!-- https://simpleisbetterthancomplex.com/tutorial/2016/06/27/how-to-use-djangos-built-in-login-system.html-->
-<!-- TODO(Soon) Figure out how we want to do styling and then revisit -->
-{#% extends 'base.html' %#}
+{#{https://simpleisbetterthancomplex.com/tutorial/2016/06/27/how-to-use-djangos-built-in-login-system.html}#}
+{% extends 'base.djhtml' %}
 
 {% block title %}Login{% endblock %}
 

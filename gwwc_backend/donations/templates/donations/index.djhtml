@@ -1,18 +1,21 @@
-{#{ TODO(Soon) Figure out how we want to do styling and then revisit }#}
+{% extends 'donations/base.djhtml' %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
 
+{% block content %}
 {#{ See note in DISCUSSION.md }#}
 {% verbatim %}
 
-<div id="app">
-<p>Hello {{ name }}, you have pledged {{ pledge }}% of your ${{ income }} in income.  Here are your donations so far</p>
-<ul>
-    <li v-for="donation in donations">{{ donation }}</li>
-</ul>
-</div>
+    <div id="app">
+        <h3>Hello {{ name }}, you have pledged {{ pledge }}% of your ${{ income }} in income.  Here are your donations so far:</h3>
+        <!-- <ul> -->
+        <li class="list-group-item" v-for="donation in donations">{{ donation }}</li>
+        <!-- </ul> -->
+    </div>
 
 {% endverbatim %}
+{% endblock %}
 
+{% block scripts %}
 <script src="{% static 'vue.js' %}"></script>
 <script src="{% static 'gwwc_app.js' %}"></script>
+{% endblock %}
