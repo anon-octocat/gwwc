@@ -17,7 +17,6 @@ def index(request):
     else:
         pledge = "Please enter an pledge"
     donations = request.user.donation_set.all()
-    print("hello1", donations)
     context = {
         "name": request.user.first_name,
         "income": income.amount,
@@ -37,8 +36,7 @@ def api(request):
         "donations": [donation.serialize()
                       for donation in request.user.donation_set.all()]
     }
-    # Not really an html file, but it is a django template
-    return render(request, "donations/api.json", context)
+    return render(request, "donations/api.djjson", context)
 
 
 def logout(request):

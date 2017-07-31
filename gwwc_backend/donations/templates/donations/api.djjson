@@ -1,0 +1,10 @@
+{
+  "name": "{{ name }}",
+  "income": {{ income }},
+  "pledge": {{ pledge }},
+  "donations": [
+    {% for donation in donations %}
+      {{ donation }},
+    {% endfor %}
+  ],
+}

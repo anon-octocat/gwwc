@@ -1,3 +1,4 @@
+<!-- TODO(Soon) Figure out how we want to do styling and then revisit -->
 <p>Hello {{ name }}, you have pledged {{ pledge }} of your {{ income }} in income.  Here are your donations so far</p>
 <ul>
 {% for donation in donations %}
