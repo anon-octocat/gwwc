@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.http import HttpResponseForbidden
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout as auth_logout
 
@@ -24,6 +25,20 @@ def index(request):
         "donations": donations
     }
     return render(request, "donations/index.djhtml", context)
+
+
+def api(request):
+    if not request.user.is_authenticated:
+        return HttpResponseForbidden()
+    context = {
+        "name": request.user.first_name,
+        "income": request.user.income.amount,
+        "pledge": request.user.pledge.percentage,
+        "donations": [donation.serialize()
+                      for donation in request.user.donation_set.all()]
+    }
+    # Not really an html file, but it is a django template
+    return render(request, "donations/api.json", context)
 
 
 def logout(request):

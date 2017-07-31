@@ -18,6 +18,14 @@ class Donation(models.Model):
     def __str__(self):
         return f"${self.amount} donation to {self.organization} on {self.date}"
 
+    def serialize(self):
+        return """{
+    "organization": "%s",
+    "amount": %f,
+    "date": "%s",
+}
+    """ % (self.organization, self.amount, self.date)
+
 
 class Income(models.Model):
     """
