@@ -3,13 +3,11 @@ var apiURL = "/api";
 var app = new Vue({
     el: '#app',
     data: {
-        name: 'foo',
-        pledge: 33,
-        income: 100,
+        name: null,
+        pledge: null,
+        income: null,
         donations: [
-            "bar",
-            "baz",
-            "bal",
+            null,
         ]
     },
     created: function () {
@@ -17,13 +15,11 @@ var app = new Vue({
         var self = this;
         xhr.open('GET', apiURL);
         xhr.onload = function () {
-            console.log(xhr.responseText); // TODO
             var data = JSON.parse(xhr.responseText);
             self.name = data.name;
             self.income = data.income;
             self.pledge = data.pledge;
             self.donations = data.donations;
-            console.log(self.name); // TODO
         };
         xhr.send();
     },
