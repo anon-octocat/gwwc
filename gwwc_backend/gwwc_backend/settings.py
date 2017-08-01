@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRETS_FILE = os.path.join(BASE_DIR, "../secrets.yaml")
 
 
-# TODO(Soon) Quick-start development settings - unsuitable for production
+# TODO(JP) Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 with open(SECRETS_FILE) as f:
@@ -25,7 +25,7 @@ with open(SECRETS_FILE) as f:
 SECRET_KEY = secrets["django_secret_key"]
 secrets = None
 
-# TODO(Soon) SECURITY WARNING: don't run with debug turned on in production!
+# TODO(JP) SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []

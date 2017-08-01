@@ -1,8 +1,0 @@
-* Discussion
-** Directly including Vue and bootstrap
-*** TODO Fill this in
-** Awkward file serving arrangement
-*** TODO Fill this in
-** Interesting notes along the way
-*** Multiple github users with smart ssh
-https://gist.github.com/jexchan/2351996
