@@ -18,6 +18,8 @@ These instructions are for how I have it setup, see <https://gist.github.com/sgn
     From here: <http://postgresapp.com/>
 2.  Install cli tools
     `brew install postgresql`
+## Secrets
+1.  Ask me to send you a `secrets.yaml` to put in the top level directory.
 ## Setup your database
 1.  Using the psql cli, create a new database, (and optionally new user and password).
 2.  Edit the DATABASES entry in `gwwc_backend/gwwc_backend/settings.py` to reflect the database name, user and password that you have.
