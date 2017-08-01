@@ -33,12 +33,14 @@ def load_data(data):
     NB: This is a pretty fragile script
     """
     for username, user_data in data["users"].items():
-        # TODO
         user_db = User.objects.create_user(username, user_data["email"], user_data["password"])
+
         user_db.first_name = user_data["first_name"]
         user_db.last_name = user_data["last_name"]
-        user_db.income = Income(amount=user_data["income"])
-        user_db.pledge = Pledge(percentage=user_data["pledge"])
+        user_db.income = Income(user=user_db, amount=user_data["income"])
+        user_db.income.save()
+        user_db.pledge = Pledge(user=user_db, percentage=user_data["pledge"])
+        user_db.pledge.save()
         load_donations(user_db, user_data)
         user_db.save()
 
