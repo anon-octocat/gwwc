@@ -21,11 +21,12 @@ class Donation(models.Model):
     def serialize(self):
         # TODO(JP) This is going to be inserted unescaped (maybe vue will handle that?) onto the
         # site, so this must do the escaping here
+        date = self.date.strftime("%Y/%m/%d")
         return """{
             "organization": "%s",
             "amount": %f,
             "date": "%s"
-      }""" % (self.organization, self.amount, self.date)
+      }""" % (self.organization, self.amount, str(date))
 
 
 class Income(models.Model):
