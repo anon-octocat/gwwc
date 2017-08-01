@@ -9,18 +9,18 @@ def index(request):
         return redirect(f'{settings.LOGIN_URL}?next={request.path}')
 
     if hasattr(request.user, "income"):
-        income = request.user.income
+        income = request.user.income.amount
     else:
         income = "Please enter an income"
     if hasattr(request.user, "pledge"):
-        pledge = request.user.pledge
+        pledge = request.user.pledge.percentage
     else:
         pledge = "Please enter an pledge"
     donations = request.user.donation_set.all()
     context = {
         "name": request.user.first_name,
-        "income": income.amount,
-        "pledge": pledge.percentage,
+        "income": income,
+        "pledge": pledge,
         "donations": donations
     }
     return render(request, "donations/index.djhtml", context)

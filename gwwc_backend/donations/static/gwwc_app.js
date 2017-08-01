@@ -26,5 +26,5 @@ var app = new Vue({
             self.donations = data.donations;
         };
         xhr.send();
-    },
+    }
 });

@@ -1,0 +1,35 @@
+users:
+  peter:
+    first_name: Peter
+    last_name: Hurford
+    email: peter@peterhurford.com
+    income: 136904
+    pledge: 10
+    donations:
+      - organization: Rethink Charity
+        amount: 5030
+        date: 2017/06/30
+      - organization: Better Eating
+        amount: 10000
+        date: 2017/05/09
+      - organization: Reducetarian Foundation
+        amount: 2000
+        date: 2017/01/18
+    password: password
+  john:
+    first_name: John
+    last_name: Doe
+    email: john.doe.22@gmail.com
+    income: 70000
+    pledge: 15
+    donations:
+      - organization: Against Malaria Foundation
+        amount: 1000
+        date: 2017/01/30
+      - organization: Against Malaria Foundation
+        amount: 3000
+        date: 2017/03/04
+      - organization: Against Malaria Foundation
+        amount: 2000
+        date: 2017/06/01
+    password: password
