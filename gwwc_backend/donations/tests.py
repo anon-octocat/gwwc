@@ -1,3 +1,3 @@
 from django.test import TestCase
 
-# Create your tests here.
+# TODO(Soon) Could test api view for parseable json
