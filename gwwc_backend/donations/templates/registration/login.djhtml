@@ -1,5 +1,5 @@
 {#{ Source: https://simpleisbetterthancomplex.com/tutorial/2016/06/27/how-to-use-djangos-built-in-login-system.html }#}
-{% extends 'donations/base.djhtml' %}
+{% extends "donations/base.djhtml" %}
 
 {% block title %}Login{% endblock %}
 

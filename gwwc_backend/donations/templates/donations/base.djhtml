@@ -4,8 +4,8 @@
     <head>
         <title>Giving What We Can Donations Tracker</title>
 
-        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
-        <link rel="stylesheet" type="text/css" href="{% static 'css/gwwc.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.css" %}" />
+        <link rel="stylesheet" type="text/css" href="{% static "css/gwwc.css" %}" />
     </head>
     <body>
         <div class="container" >

@@ -6,7 +6,7 @@ from django.contrib.auth import logout as auth_logout
 
 def index(request):
     if not request.user.is_authenticated:
-        return redirect(f'{settings.LOGIN_URL}?next={request.path}')
+        return redirect(f"{settings.LOGIN_URL}?next={request.path}")
 
     if hasattr(request.user, "income"):
         income = request.user.income.amount
@@ -41,4 +41,4 @@ def api(request):
 
 def logout(request):
     auth_logout(request)
-    return redirect(f'{settings.LOGIN_URL}')
+    return redirect(f"{settings.LOGIN_URL}")

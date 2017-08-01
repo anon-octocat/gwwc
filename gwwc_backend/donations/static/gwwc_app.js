@@ -1,7 +1,7 @@
 var apiURL = "/api";
 
 var app = new Vue({
-    el: '#app',
+    el: "#app",
     data: {
         name: null,
         pledge: null,
@@ -17,7 +17,7 @@ var app = new Vue({
     created: function () {
         var xhr = new XMLHttpRequest();
         var self = this;
-        xhr.open('GET', apiURL);
+        xhr.open("GET", apiURL);
         xhr.onload = function () {
             var data = JSON.parse(xhr.responseText);
             self.name = data.name;

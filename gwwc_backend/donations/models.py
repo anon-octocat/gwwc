@@ -13,7 +13,7 @@ class Donation(models.Model):
     organization = models.CharField(max_length=200, default="")
     # TODO(JP) Don't assume USD for everyone
     amount = models.PositiveIntegerField()
-    date = models.DateTimeField('date of donation')
+    date = models.DateTimeField("date of donation")
 
     def __str__(self):
         return f"${self.amount} donation to {self.organization} on {self.date}"

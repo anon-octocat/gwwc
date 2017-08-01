@@ -1,4 +1,4 @@
-{% extends 'donations/base.djhtml' %}
+{% extends "donations/base.djhtml" %}
 {% load static %}
 
 {% block content %}
@@ -30,6 +30,6 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{% static 'vue.js' %}"></script>
-<script src="{% static 'gwwc_app.js' %}"></script>
+<script src="{% static "vue.js" %}"></script>
+<script src="{% static "gwwc_app.js" %}"></script>
 {% endblock %}
