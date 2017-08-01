@@ -3,6 +3,7 @@
 
 {% block content %}
 {#{ See note in DISCUSSION.md }#}
+{#{ Begin Vue section }#}
 {% verbatim %}
 
     <div id="app">
