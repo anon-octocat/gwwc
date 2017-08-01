@@ -81,7 +81,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'donations',
-        # TODO Perhaps change this?
         'USER': 'jpaddison',
         'PASSWORD': '',
         'HOST': 'localhost',
